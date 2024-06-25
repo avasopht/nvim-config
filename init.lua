@@ -14,7 +14,14 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
-    "folke/which-key.nvim",
+    {
+        "folke/which-key.nvim",
+        event = 'VeryLazy',
+        init = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+            end,
+    },
     { "folke/neoconf.nvim", cmd = "Neoconf" },
     "folke/neodev.nvim",
     {
@@ -22,6 +29,11 @@ require("lazy").setup({
         dependencies = { "nvim-lua/plenary.nvim" }
     },
     { "nvim-treesitter/nvim-treesitter"},
+    {
+      'nvim-tree/nvim-tree.lua',
+      cmd = { 'NvimTreeToggle', 'NvimTreeFocus' },
+      opts = function() return require('avasopht.nvim-tree') end,
+    },
     {
         "rose-pine/neovim",
         name = "rose-pine",
