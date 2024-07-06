@@ -11,4 +11,5 @@ Supported types:
 # Todo
 
 1. Document shortcut keys
+    * Configuring the [folke/which-key.nvim](https://github.com/folke/which-key.nvim) might do the job
 2. Some basic project manager (even if just navigation between top level directories)

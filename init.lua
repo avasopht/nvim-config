@@ -60,8 +60,11 @@ require("lazy").setup({
 
             -- Snippets
             {'L3MON4D3/LuaSnip'},
-
         }
     },
-
+    --[[
+    {
+      dir='~/ClionProjects/aardvark/aa-dev',
+    }
+    --]]
 })
